@@ -1,9 +1,9 @@
-var app = angular.module('finder', [], function ($interpolateProvider) {
+var app = angular.module('oam', [], function ($interpolateProvider) {
   $interpolateProvider.startSymbol('[[');
   $interpolateProvider.endSymbol(']]');
 })
 
-app.controller('ctrl', function($scope, $filter, $http, $location, $window) {
+app.controller('fontPageCtrl', function($scope, $filter, $http, $location, $window) {
   $scope.currentPage = 1;
   $scope.pageSize = 20;
   $scope.data = [];

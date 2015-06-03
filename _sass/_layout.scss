@@ -1,3 +1,7 @@
+.containerWrapper{
+  //margin-top: 48px;
+}
+
 .container {
 
   @extend %clearfix;
@@ -16,26 +20,26 @@ header {
 
   @extend %tight;
 
-  background: $accent;
+  background: $white;
   border-bottom: 1px solid $body-bg;
   font-size: 1.2em;
   margin-bottom: 1em;
-  padding: .25em 1em;
+  //padding: .25em 1em;
 
   @include breakpoint(medium-up) {
     font-size: $font-size;
-    height: 35px;
+    height: 60px;
     line-height: 1.6;
     margin-bottom: 0;
-    padding-left: 2em;
-    padding-right: 2em;
+    //padding-left: 2em;
+    //padding-right: 2em;
     position: fixed;
     width: 100%;
     z-index: 1;
   }
 
   @include breakpoint(medium) {
-    padding: .25em .75em;
+    //padding: .25em .75em;
   }
 
   .title {
@@ -61,14 +65,14 @@ header {
 }
 
 .content {
-  max-width: 40em;
+  //max-width: 40em;
   position: relative;
 
   @include breakpoint(medium-up) {
-    float: right;
+    //float: right;
     padding-bottom: 5em;
     padding-top: 2em;
-    width: 65%;
+    //width: 65%;
   }
 
 }
@@ -77,18 +81,18 @@ header {
 
   display: none;
 
-  @include breakpoint(medium-up) {
-    border-right: 1px dashed rgba($text-color, .2);
-    display: block;
-    float: left;
-    height: 100%;
-    left: 0;
-    overflow-y: scroll;
-    padding: 1em 2em 3em;
-    position: fixed;
-    top: 35px;
-    width: 30%;
-  }
+  //@include breakpoint(medium-up) {
+  //  border-right: 1px dashed rgba($text-color, .2);
+  //  display: block;
+  //  float: left;
+  //  height: 100%;
+  //  left: 0;
+  //  overflow-y: scroll;
+  //  padding: 1em 2em 3em;
+  //  position: fixed;
+  //  top: 35px;
+  //  width: 30%;
+  //}
 
 }
 
