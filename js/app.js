@@ -22,12 +22,19 @@ app.controller('fontPageCtrl', function($scope, $filter, $http, $location, $wind
 
   $scope.imageHeight = $window.innerHeight;
 
-  $scope.myprop = function() {
+  $scope.sectionHeight = function() {
     return {
 
       height: $scope.imageHeight + 'px'
     };
   };
+
+  $scope.sectionHeightHeader = function() {
+    return {
+
+      'line-height': $scope.imageHeight + 60 + 'px'
+    };
+  }
 
 });
 
