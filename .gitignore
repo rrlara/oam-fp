@@ -3,3 +3,5 @@ _site
 *.lock
 *.sass-cache
 api.json
+
+.idea/workspace.xml
