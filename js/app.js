@@ -20,20 +20,13 @@ app.controller('fontPageCtrl', function($scope, $filter, $http, $location, $wind
 
   });
 
+  $scope.imageHeight = $window.innerHeight;
 
+  $scope.myprop = function() {
+    return {
 
-
-  $scope.sendAnalytics = function() {
-    $window.ga('send', 'pageview', { page: '/#'+$location.url() });
-  };
-
-  $scope.updateLocation = function() {
-    $location.path("/"+$scope.selectedTags.replace(' ','+'));
-    $scope.sendAnalytics();
-  };
-
-  $scope.reset = function() {
-    $location.path("");
+      height: $scope.imageHeight + 'px'
+    };
   };
 
 });
