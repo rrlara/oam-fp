@@ -1,7 +1,7 @@
 
 ## Building
 
-Font Library is built with [Jekyll](http://jekyllrb.com/). If you're just updating tags in `families.json`, you don't need to build the site locally. But you can if you prefer to see your changes before you submit a pull request.
+Font Library is built with [Jekyll](http://jekyllrb.com/).
 
 To build it locally, you will need to:
 
