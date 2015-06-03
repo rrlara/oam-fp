@@ -1,0 +1,17 @@
+---
+layout: compress
+---
+
+<!DOCTYPE html>
+<html ng-app="finder" ng-controller="ctrl">
+{% include head.html %}
+<body ng-cloak>
+	<header>
+		{% include header.html %}
+	</header>
+	<div class="container">
+		{{content}}
+	</div>
+	{% include footer.html %}
+</body>
+</html>

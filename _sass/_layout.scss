@@ -1,0 +1,310 @@
+.container {
+
+  @extend %clearfix;
+
+
+  margin: 0 auto;
+  max-width: $container-width;
+  position: relative;
+
+  @include breakpoint(medium) {
+    padding: 0 1em;
+  }
+}
+
+header {
+
+  @extend %tight;
+
+  background: $accent;
+  border-bottom: 1px solid $body-bg;
+  font-size: 1.2em;
+  margin-bottom: 1em;
+  padding: .25em 1em;
+
+  @include breakpoint(medium-up) {
+    font-size: $font-size;
+    height: 35px;
+    line-height: 1.6;
+    margin-bottom: 0;
+    padding-left: 2em;
+    padding-right: 2em;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+  }
+
+  @include breakpoint(medium) {
+    padding: .25em .75em;
+  }
+
+  .title {
+    color: $white;
+
+    &:hover {
+      color: $white;
+      text-decoration: underline;
+    }
+
+  }
+
+  .subtitle {
+    color: rgba($white, .55);
+
+    &:hover {
+      color: rgba($white, .55);
+      text-decoration: underline;
+    }
+
+  }
+
+}
+
+.content {
+  max-width: 40em;
+  position: relative;
+
+  @include breakpoint(medium-up) {
+    float: right;
+    padding-bottom: 5em;
+    padding-top: 2em;
+    width: 65%;
+  }
+
+}
+
+.sidebar {
+
+  display: none;
+
+  @include breakpoint(medium-up) {
+    border-right: 1px dashed rgba($text-color, .2);
+    display: block;
+    float: left;
+    height: 100%;
+    left: 0;
+    overflow-y: scroll;
+    padding: 1em 2em 3em;
+    position: fixed;
+    top: 35px;
+    width: 30%;
+  }
+
+}
+
+.select-tags {
+
+  @include breakpoint(medium-up) {
+    display: none;
+  }
+
+}
+
+.sidebar-group {
+
+  margin-bottom: 1em;
+
+}
+
+
+.btn {
+
+  @extend %upper;
+
+  @extend %round;
+
+  @extend %tight;
+
+  background: lighten($body-bg, 2%);
+  border: 1px solid;
+  box-shadow: 0 .1em darken($accent, 5%);
+  color: $accent;
+  display: inline-block;
+  padding: .25em 1em;
+  transition: background $transition;
+
+  &.small {
+    padding: .25em .5em;
+  }
+
+  &.quiet {
+    border: 1px solid rgba($accent, .25);
+    box-shadow: none;
+  }
+
+  &:hover {
+
+    @extend %flat-bg;
+
+    color: lighten($accent, 10%);
+    transition: background $transition;
+  }
+
+  &:active {
+    box-shadow: none;
+    position: relative;
+    top: .1em;
+  }
+
+  &[disabled] { display: none; }
+}
+
+select {
+
+  @extend %upper;
+
+  @extend %round;
+
+  @extend %tight;
+
+  background: lighten($body-bg, 2%);
+  border: 1px solid;
+  color: $selected-tag;
+  display: inline-block;
+  font-size: .9em;
+  padding: .25em 1em;
+}
+
+.btn-clear {
+  cursor: pointer;
+  font-size: .9em;
+
+  @include breakpoint(medium-down) {
+    display: block;
+  }
+
+}
+
+.pagination {
+  margin: 2em 0 4em;
+  text-align: center;
+
+  .btn {
+    cursor: pointer;
+    font-size: 1.25em;
+  }
+
+}
+
+.search-status {
+  @extend %clearfix;
+
+  margin-bottom: .5em;
+  margin-top: 1em;
+
+  .family-tag {
+    position: relative;
+  }
+
+  .family-tag:hover {
+    color: $accent;
+    cursor: pointer;
+  }
+
+  .family-tag:hover:before {
+    content: '\00D7';
+    font-size: 5em;
+    left: 0;
+    line-height: 1;
+    position: absolute;
+    text-align: center;
+    top: -.35em;
+    width: 100%;
+  }
+
+}
+
+.no-results {
+
+  @extend %fade;
+
+  -webkit-animation: fade $transition * 2 forwards 1s;
+  animation: fade $transition * 2 forwards 1s;
+  font-size: 1.25em;
+  margin-top: 2em;
+
+}
+
+.btn-github {
+  margin: .5em 0;
+
+  @include breakpoint(medium-up) {
+    margin: 0 0 1em 1em;
+  }
+
+}
+
+.btn-github-container {
+
+  @include breakpoint(medium-down) {
+    display: block;
+  }
+
+}
+
+.controls {
+  border-radius: .5em;
+  position: relative;
+
+  @include breakpoint(medium-up) {
+    text-align: right;
+    -ms-transform: translateY(-2.5em);
+    -webkit-transform: translateY(-2.5em);
+    transform: translateY(-2.5em);
+    transition: $transition;
+  }
+
+  @include breakpoint(medium) {
+
+    margin-bottom: 2em;
+
+    select {
+      border-radius: 0;
+      margin-bottom: .5em;
+    }
+  }
+
+  &.active {
+    -ms-transform: translateY(.25em);
+    -webkit-transform: translateY(.25em);
+    transform: translateY(.25em);
+    transition: $transition;
+  }
+}
+
+.number-of-pages {
+  color: $accent;
+  display: inline-block;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.btn-settings {
+
+  @extend %fade;
+
+  cursor: pointer;
+  font-size: .8em;
+  position: relative;
+  top: 25px;
+  width: 19px;
+
+  @include breakpoint(medium-down) {
+    display: none;
+  }
+
+  path {
+
+    @extend %fade;
+
+    fill: $text-color;
+  }
+
+  &:hover path,
+  &.active path {
+
+    @extend %fade;
+
+    fill: $accent;
+  }
+}
