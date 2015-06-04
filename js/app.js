@@ -22,6 +22,9 @@ app.controller('fontPageCtrl', function($scope, $filter, $http, $location, $wind
 
   $scope.imageHeight = $window.innerHeight;
 
+  console.log("$window.innerHeight", $window.innerHeight);
+  console.log("$window.innerWidth", $window.innerWidth);
+
   $scope.sectionHeight = function() {
     return {
 
