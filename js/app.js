@@ -20,24 +20,41 @@ app.controller('fontPageCtrl', function($scope, $filter, $http, $location, $wind
 
   });
 
-  $scope.imageHeight = $window.innerHeight;
+  //$scope.imageHeight = $window.innerHeight;
 
   console.log("$window.innerHeight", $window.innerHeight);
   console.log("$window.innerWidth", $window.innerWidth);
 
-  $scope.sectionHeight = function() {
-    return {
+  /* ----------- iPad mini ----------- */
 
-      height: $scope.imageHeight + 'px'
+  /* Portrait and Landscape */
+
+    $scope.sectionHeight = function() {
+      if ($window.innerWidth >= 768) {
+        return {
+
+          height: $window.innerHeight + 'px'
+        };
+      }else {
+        return {
+          width: 100 + '%'
+        }
+      }
     };
-  };
 
-  $scope.sectionHeightHeader = function() {
-    return {
+    $scope.sectionHeightHeader = function() {
+      if ($window.innerWidth >= 768) {
+        return {
 
-      'line-height': $scope.imageHeight + 60 + 'px'
-    };
-  }
+          'line-height': $window.innerHeight + 60 + 'px'
+        };
+      }else{
+
+      }
+    }
+
+
+
 
 });
 
