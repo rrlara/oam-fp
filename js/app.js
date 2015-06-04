@@ -33,7 +33,9 @@ app.controller('fontPageCtrl', function($scope, $filter, $http, $location, $wind
       if ($window.innerWidth >= 768) {
         return {
 
-          height: $window.innerHeight + 'px'
+          height: $window.innerHeight + 'px',
+          'background-position': 50 + '%' + 50 + '%',
+          'background-size': 'cover'
         };
       }else {
         return {
